@@ -1,0 +1,142 @@
+[
+    {
+        "question": "What is the purpose of a context switch in an operating system?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "To save the CPU state for a process",
+                "correct": false,
+                "feedback": "Incorrect. While saving the CPU state is part of a context switch, the primary purpose is to change the active process on a CPU."
+            },
+            {
+                "answer": "To capture the process state for later retrieval",
+                "correct": false,
+                "feedback": "Incorrect. Capturing the process state is necessary for a context switch, but the primary purpose is to change the active process on a CPU."
+            },
+            {
+                "answer": "To add a layer of indirection between the CPU and the user",
+                "correct": false,
+                "feedback": "Incorrect. Adding a layer of indirection is a concept related to virtualizing, but not the primary purpose of a context switch."
+            },
+            {
+                "answer": "To change the active process on a CPU",
+                "correct": true,
+                "feedback": "Correct! A context switch is performed to change the active process on a CPU."
+            }
+        ]
+    },
+    {
+        "question": "Which are NOT valid transitions in the process life cycle?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "ready -> running",
+                "correct": false,
+                "feedback": ""
+            },
+            {
+                "answer": "ready -> blocked",
+                "correct": true,
+                "feedback": ""
+            },
+            {
+                "answer": "running -> ready",
+                "correct": false,
+                "feedback": ""
+            },
+            {
+                "answer": "running -> blocked",
+                "correct": false,
+                "feedback": ""
+            },
+            {
+                "answer": "blocked -> ready",
+                "correct": false,
+                "feedback": ""
+            },
+            {
+                "answer": "blocked -> running",
+                "correct": true,
+                "feedback": ""
+            }
+        ]
+    },
+    {
+        "question": "Which are true about processes?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "A parent process can exit before a child process exits",
+                "correct": true,
+                "feedback": ""
+            },
+            {
+                "answer": "A variable change in a child process will be reflected in its parent process",
+                "correct": false,
+                "feedback": ""
+            },
+            {
+                "answer": "The variables and their addresses in a forked process are the same as the ones in the parent process",
+                "correct": true,
+                "feedback": ""
+            },
+            {
+                "answer": "Processes cannot communicate with eachother because of their separate address spaces",
+                "correct": false,
+                "feedback": ""
+            }
+        ]
+    },
+    {
+        "question": "Which are true about threads?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Multithreading independent threads will make process execute faster",
+                "correct": false,
+                "feedback": ""
+            },
+            {
+                "answer": "Threads can see other threads' local variables and addresses",
+                "correct": false,
+                "feedback": "although they share the same address space, their view is still limited to their scope"
+            },
+            {
+                "answer": "A thread can block other threads from running at the same time",
+                "correct": true,
+                "feedback": ""
+            },
+            {
+                "answer": "If there exists a process with 2 threads, forking will result in it having 4 threads",
+                "correct": false,
+                "feedback": ""
+            }
+        ]
+    },
+    {
+        "question": "Which are true about scheduling?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Batch scheduling is slower than preemptive scheduling",
+                "correct": false,
+                "feedback": ""
+            },
+            {
+                "answer": "Preemptive scheduling has better turnaround time than batch",
+                "correct": true,
+                "feedback": ""
+            },
+            {
+                "answer": "Shortest Job First (SJF) and priority scheduling can lead to starvation",
+                "correct": true,
+                "feedback": ""
+            },
+            {
+                "answer": "More frequent scheduling means all processes execute faster",
+                "correct": false,
+                "feedback": ""
+            }
+        ]
+    }
+]

@@ -1,0 +1,55 @@
+[
+    {
+        "question": "From a hardware perspective, the simplest memory management model is to have processes just use the physical address space. What are the major problems with this model?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Programs need to be re-located when loaded",
+                "correct": true,
+                "feedback": "Correct! In the physical address space model, programs need to be loaded into different physical memory addresses, requiring them to be re-located during the loading process."
+            },
+            {
+                "answer": "Programs use a different kind of name from directories",
+                "correct": false,
+                "feedback": "Incorrect. The issue with physical memory management is not related to the difference in naming conventions between programs and directories."
+            },
+            {
+                "answer": "There is no protection between different programs",
+                "correct": true,
+                "feedback": "Correct! In the physical address space model, there is no isolation between programs, which means a bug in one program can modify or affect other programs."
+            },
+            {
+                "answer": "To prevent users from modifying directory data accessed by kernel code",
+                "correct": false,
+                "feedback": "Incorrect. The problem with physical memory management is not related to preventing user modification of directory data accessed by kernel code."
+            }
+        ]
+    },
+    {
+        "question": "What are the advantages of using virtual memory with paging?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Allows for efficient memory allocation and deallocation",
+                "correct": true,
+                "feedback": "Correct! Virtual memory with paging allows for efficient memory allocation and deallocation by using page-level granularity."
+            },
+            {
+                "answer": "Enables sharing of memory pages between processes",
+                "correct": true,
+                "feedback": "Correct! Virtual memory with paging enables sharing of memory pages between processes, reducing memory usage and improving system performance."
+            },
+            {
+                "answer": "Provides protection between different processes",
+                "correct": true,
+                "feedback": "Correct! Virtual memory with paging provides protection between different processes, preventing one process from accessing the memory of another process."
+            },
+            {
+                "answer": "Eliminates the need for disk swapping",
+                "correct": false,
+                "feedback": "Incorrect. Virtual memory with paging still requires disk swapping to handle memory demands beyond the physical capacity."
+            }
+        ]
+    }
+
+]
