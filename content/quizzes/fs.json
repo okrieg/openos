@@ -37,7 +37,7 @@
             {
                 "answer": "Directories use a different kind of name from files",
                 "correct": false,
-                "feedback": "Incorrect. Directories and files can use the same naming conventions, so this is not a reason for using different system calls for directory operations."
+                "feedback": "Incorrect. Directories and files can use the same naming conventions."
             },
             {
                 "answer": "To prevent users from modifying directory data which is accessed by kernel code",
@@ -51,19 +51,14 @@
         "type": "many_choice",
         "answers": [
             {
-                "answer": "A symbolic link is a file that acts as a shortcut or pointer to another file or directory, while a hard link is a directory entry that directly points to the inode of a file.",
-                "correct": true,
-                "feedback": "Correct! The answer explains the difference between symbolic links and hard links in a concise manner."
-            },
-            {
                 "answer": "Symbolic links are used for files, while hard links are used for directories.",
                 "correct": false,
-                "feedback": "Incorrect. Symbolic links and hard links can be used for both files and directories. The distinction lies in their underlying mechanisms and behaviors."
+                "feedback": "Incorrect. Symbolic links and hard links can be used for both files and directories."
             },
             {
                 "answer": "Symbolic links and hard links are identical and can be used interchangeably in Unix file systems.",
                 "correct": false,
-                "feedback": "Incorrect. Symbolic links and hard links have distinct characteristics and behaviors. They are not interchangeable."
+                "feedback": "Incorrect. Symbolic links and hard links have distinct characteristics and behaviors."
             },
             {
                 "answer": "Symbolic links are represented by separate inodes, while hard links share the same inode as the target file.",
@@ -84,17 +79,17 @@
             {
                 "answer": "The partition table provides information about the size of the disk and the total number of files stored on it.",
                 "correct": false,
-                "feedback": "Incorrect. The partition table is primarily used for dividing the disk into partitions, not for providing information about the size of the disk or the total number of files."
+                "feedback": "Incorrect. The partition table is primarily used for dividing the disk into partitions."
             },
             {
                 "answer": "The partition table ensures data integrity by verifying the consistency of the file system structures on the disk.",
                 "correct": false,
-                "feedback": "Incorrect. While data integrity is important, the primary purpose of the partition table is to divide the disk into partitions containing different file systems."
+                "feedback": "Incorrect. While data integrity is important, that is not the primare purpose of the partition table."
             },
             {
                 "answer": "The partition table stores the file system code required to interpret the blocks on the disk.",
                 "correct": false,
-                "feedback": "Incorrect. The partition table indicates the type of file system that should be used to interpret the blocks on the disk, but it does not store the actual file system code."
+                "feedback": "Incorrect. The partition table does not store the actual file system code."
             },
             {
                 "answer": "The partition table is used to divide the disk into partitions, each potentially containing a different file system.",
@@ -110,7 +105,7 @@
             {
                 "answer": "File systems store free block information in a free list, where each block on the list contains free disk block numbers.",
                 "correct": false,
-                "feedback": "Incorrect. While the free list approach was used in some file systems, the most common method to represent free blocks is by using an allocation bitmap."
+                "feedback": "Incorrect. While the free list approach was used in some file systems, that is not the most common method."
             },
             {
                 "answer": "File systems represent free blocks using an allocation bitmap, where each block is associated with a bit in the bitmap. A '0' bit indicates a free block, and a '1' bit indicates an allocated block.",
@@ -120,12 +115,12 @@
             {
                 "answer": "File systems utilize a linked list structure to maintain the list of free blocks on the disk.",
                 "correct": false,
-                "feedback": "Incorrect. Although linked list structures can be used for other purposes, the allocation bitmap is the standard method used to represent free blocks in file systems."
+                "feedback": "Incorrect. Although linked list structures can be used for other purposes, that is not the most common method."
             },
             {
                 "answer": "File systems use a partition table to track the status of blocks, designating certain blocks as free.",
                 "correct": false,
-                "feedback": "Incorrect. The partition table is used for partitioning the disk, while the allocation bitmap is specifically used to represent the status of individual blocks as free or allocated."
+                "feedback": "Incorrect. The partition table is used for partitioning the disk."
             }
         ]
     },
@@ -141,17 +136,17 @@
             {
                 "answer": "Extent-based file systems provide better data integrity and reliability compared to traditional block-based file systems.",
                 "correct": false,
-                "feedback": "Incorrect. While data integrity is important, the primary advantage of extent-based file systems is the reduction in metadata and improved disk access performance."
+                "feedback": "Incorrect. While data integrity is important, it is not the the primary advantage of using extent-based file systems."
             },
             {
                 "answer": "Extent-based file systems simplify file system management and reduce disk fragmentation compared to traditional block-based file systems.",
                 "correct": false,
-                "feedback": "Incorrect. While extent-based file systems may have benefits in file system management and fragmentation, their primary advantage is the reduction in metadata and improved disk access performance."
+                "feedback": "Incorrect. While extent-based file systems may have benefits in file system management and fragmentation, it is not the the primary advantage of using extent-based file systems."
             },
             {
                 "answer": "Extent-based file systems allow for greater file size flexibility and support for larger storage devices compared to traditional block-based file systems.",
                 "correct": false,
-                "feedback": "Incorrect. While extent-based file systems may offer advantages in file size flexibility, their primary advantage is the reduction in metadata and improved disk access performance."
+                "feedback": "Incorrect. While extent-based file systems may offer advantages in file size flexibility, it is not the the primary advantage of using extent-based file systems."
             }
         ]
     },
@@ -167,17 +162,17 @@
             {
                 "answer": "Journaling improves file system performance by optimizing disk reads and writes to reduce seek times.",
                 "correct": false,
-                "feedback": "Incorrect. While journaling may have some performance benefits, its primary purpose is to ensure consistency and recoverability of file systems by recording changes before they are made."
+                "feedback": "Incorrect. While journaling may have some performance benefits, it is not the main purpose of journaling in file systems."
             },
             {
                 "answer": "Journaling allows for the compression of file system data to save disk space and improve storage efficiency.",
                 "correct": false,
-                "feedback": "Incorrect. Journaling does not directly relate to compression or storage efficiency. Its main purpose is to ensure consistency and recoverability of file systems."
+                "feedback": "Incorrect. Journaling does not directly relate to compression or storage efficiency."
             },
             {
                 "answer": "Journaling enables concurrent access to files by multiple users, improving file system scalability and performance.",
                 "correct": false,
-                "feedback": "Incorrect. While journaling may have some impact on concurrent access and scalability, its primary purpose is to ensure consistency and recoverability of file systems by recording changes."
+                "feedback": "Incorrect. While journaling may have some impact on concurrent access and scalability, it is not the main purpose of journaling in file systems."
             }
         ]
     },        
@@ -188,12 +183,12 @@
             {
                 "answer": "Transfer time and data capacity",
                 "correct": false,
-                "feedback": "Incorrect. While transfer time is involved in disk performance, seek time and rotational latency are the factors that have a major effect."
+                "feedback": "Incorrect. While transfer time is involved in disk performance, they are not the factors that have a major effect."
             },
             {
                 "answer": "Platter surface and track number",
                 "correct": false,
-                "feedback": "Incorrect. While platter surface and track number are part of the disk's structure, seek time and rotational latency are the factors that significantly impact disk performance."
+                "feedback": "Incorrect. While platter surface and track number are part of the disk's structure, they do not significantly impact disk performance."
             },
             {
                 "answer": "Seek time and rotational latency",
@@ -203,15 +198,8 @@
             {
                 "answer": "Logical Block Addresses (LBAs) and data block size",
                 "correct": false,
-                "feedback": "Incorrect. While LBAs and data block size are relevant to disk organization, seek time and rotational latency are the factors that significantly affect disk performance."
+                "feedback": "Incorrect. While LBAs and data block size are relevant to disk organization, they do not significantly impact disk performance."
             }
         ]
     }     
 ]
-  
-  
-  
-  
-  
-  
-  
